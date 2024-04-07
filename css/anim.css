@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#mensajes {
+    text-align: center;
+    width: 800px;
+    height: 100px;
+    font-size: 4em;
+    position: absolute;
+
+    animation: test 30s cubic-bezier(0,0,0,0) infinite normal both;
+    animation-play-state: running;
+}
+
+@keyframes test {
+    0% {
+        left: 0px;
+        opacity: 0;
+    }
+    64% {
+        top: 200px;
+        left: 600px;
+        opacity: 0%;
+    }
+    65% {
+        opacity: 100%;
+        left: 600px;
+    }
+    99.99%{
+        opacity: 100%;
+        left: 600px;
+        top: 200px;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#anim > * {
+    position: absolute;
+}
+
+#anim {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#nube {
+    background: url(/images/cloud.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    animation: nube 30s cubic-bezier(0,0,0,0) infinite normal none;
+}
+
+#lluvia {
+    background: url(/images/rain.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+    z-index: 2;
+    opacity: 0;
+    width: 400px;
+    height: 90vh;
+    top: 190px;
+
+    animation: lluvia 30s cubic-bezier(0,0,0,0) infinite normal none;
+}
+
+#sol {
+    background: url(/images/sun.png);
+    background-size: contain;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    left: 1600px;
+    opacity: 0;
+
+    animation: sol 30s cubic-bezier(0,0,0,0) infinite normal none;
+}
+
+#flor {
+    background: url(/images/flower.png);
+    background-size: contain;
+    z-index: 1;
+    width: 700px;
+    height: 500px;
+    opacity: 0;
+    animation: flor 30s cubic-bezier(0,0,0,0) infinite normal none;
+}
+
+
+@keyframes nube {
+    0%{
+        opacity: 1;
+        left: -700px;
+    }
+    14%{
+        
+        left: 600px;
+    }
+    15% {
+    }
+    30% {
+    }
+    31% {
+        left: 600px;
+    }
+    50%{
+        left: 2000px;
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes lluvia {
+    0%{
+        left: -500px;
+    }
+    14%{
+        left: 660px;
+        opacity: 0%;
+        z-index: -1;
+    }
+    15% {
+        opacity: 100%;
+        background-position-y: 1px;
+    }
+    30% {
+        opacity: 100%;
+        background-position-y: 1000px;
+    }
+    31% {
+        left: 660px;
+        opacity: 0%;
+        z-index: -1;
+    }
+    50%{
+        left: 2000px;
+    }
+}
+
+@keyframes sol {
+    50% {
+        opacity: 0%;
+    }
+    51% {
+        opacity: 75%;
+    }
+    90% {
+        opacity: 100%;
+        transform: rotate(0turn);
+    }
+    100% {
+        opacity: 100%;
+        transform: rotate(10turn);
+    }
+
+}
+
+@keyframes flor {
+
+    50% {
+        opacity: 0%;
+        left:  660px;
+        top: 1200px;
+    }
+    51% {
+        top: 1200px;
+        opacity: 100%;
+    }
+    65% {
+        top: 600px;
+    }
+    99.9999%{
+        top: 600px;
+
+    }
+    100% {
+        opacity: 100%;
+        left:  660px;
+        top: 1200px;
+    }
+
+}
